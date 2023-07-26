@@ -1,0 +1,16 @@
+ Scanner in = new Scanner(System.in);
+        int sum = 0;
+        String input;
+
+        System.out.println("Enter numbers (type 'x' to stop):");
+
+        while (!(input = in.next()).equalsIgnoreCase("x")) {
+            try {
+                int number = Integer.parseInt(input);
+                sum += number;
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter a valid number or 'x' to stop.");
+            }
+        }
+
+        System.out.println("Sum of all numbers: " + sum);
